@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type = "text/css" href="{% static 'blog/homepage.css' %}">
+    {% if title %}
+            <title>Django Blog - {{title}}</title>
+        {% else %}
+            <title>Django Blog</title>
+        {% endif %}
+</head>
+<body>
+    <h1 class="Introduction">
+        NutriNet - Your one-stop for health
+    </h1>
+    <p id="quote">
+        "Health is a matter of choice, not a mystery of chance."
+    </p>
+    <div id="loginsignin">
+        <p>
+        Welcome to NutriNet. Your all-in-one solution for personalized health
+        and wellness management. The app was created to make sure that you feel
+        fit and fine all the time. Please free to register if you don't have an
+        account with us
+        </p>
+        <br>
+        <a href="{% url 'register'%}" class="button" >Register</a>
+    </div>
+</body>
+</html>
