@@ -3,8 +3,10 @@ from django.contrib.auth import logout,login,authenticate
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
+from .models import Profile
 from plotly.offline import plot
 from plotly.graph_objs import Scatter
+
 
 def register(request):
     if request.method == 'POST':
@@ -39,11 +41,16 @@ def profile(request):
         else:
             u_form = UserUpdateForm(instance=request.user)
             p_form = ProfileUpdateForm(instance=request.user.profile)
+
+        profile_instance = Profile.objects.get(user = request.user)
         context = {
             'u_form': u_form,
-            'p_form': p_form
+            'p_form': p_form,
+            'height': profile_instance.height,
+            'weight': profile_instance.weight,
+            'age': profile_instance.age,
         }
-        return render(request,'users/profile.html',context)
+        return render(request, 'users/profile.html', context)
 
 
 def homepage(request):

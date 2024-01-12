@@ -14,21 +14,42 @@
         {% endif %}
 </head>
 <body>
-    <h1 class="Introduction">
-        NutriNet - Your one-stop for health
-    </h1>
-    <p id="quote">
-        "Health is a matter of choice, not a mystery of chance."
-    </p>
-    <div id="loginsignin">
-        <p>
-        Welcome to NutriNet. Your all-in-one solution for personalized health
-        and wellness management. The app was created to make sure that you feel
-        fit and fine all the time. Please free to register if you don't have an
-        account with us
-        </p>
-        <br>
-        <a href="{% url 'register'%}" class="button" >Register</a>
-    </div>
+    <header class="site-header">
+      <nav class="navbar  navbar-dark bg-steel fixed-top">
+        <div class="container">
+             <a class="navbar-brand mr-4" href = '#'>NutriNet</a>
+          </div>
+      </nav>
+    </header>
+    <div class = "fade-element"></div>
+        <div id="Introduction">
+            NutriNet - Your one-stop for health
+        </div>
+        <div id="quote" class="fade-element">
+            "Health is a matter of choice, not a mystery of chance."
+        </div>
+        <div id="loginsignin">
+            <p>
+            Welcome to NutriNet. Your all-in-one solution for personalized health
+            and wellness management. The app was created to make sure that you feel
+            fit and fine all the time. Please free to register if you don't have an
+            account with us
+            </p>
+            <br>
+            <a href="{% url 'register'%}" class="button" style="margin-right: 100px;" >Register</a>
+            <a href="{% url 'login'%}" class="button" >Login</a>
+        </div>
+
+    <script type="text/javascript">
+     document.addEventListener('DOMContentLoaded', function () {
+            var bg = document.getElementById("Introduction");
+            window.addEventListener('scroll', function () {
+                bg.style.opacity = 1 - window.pageYOffset / 550;
+                bg.style.top = window.pageYOffset + 'px';
+                bg.style.backgroundPositionY = -window.pageYOffset / 2 + 'px';
+            });
+        });
+</script>
+
 </body>
 </html>

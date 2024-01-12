@@ -1,18 +1,40 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from .models import Post
+from users.models import Profile
 from django.views.generic import ListView,DetailView,CreateView,UpdateView,DeleteView
 from django.contrib.auth.decorators import login_required
 from plotly.offline import plot
 from plotly.graph_objs import Scatter
+from django.contrib import messages
 import plotly.express as px
+from users.forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
 
 
 @login_required
 def home(request):
+    u_form = UserUpdateForm(request.POST, instance=request.user)
+    p_form = ProfileUpdateForm(request.POST,
+                               request.FILES,
+                               instance=request.user.profile)
+    if u_form.is_valid() and p_form.is_valid():
+        u_form.save()
+        p_form.save()
+        messages.success(request, f'Your account has been updated successfully!')
+        return redirect('profile')
+    else:
+        u_form = UserUpdateForm(instance=request.user)
+        p_form = ProfileUpdateForm(instance=request.user.profile)
+
+    try:
+        profile_instance = request.users.profile
+    except Profile.DoesNotExist:
+        profile_instance = None
     context = {
-        'posts': Post.objects.all(),
-        'title': 'Home'
+        'title': 'Home',
+        'u_form': u_form,
+        'p_form': p_form,
+        'profile_instance': profile_instance,
     }
     return render(request, 'blog/home.html',context)
 

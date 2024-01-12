@@ -1,16 +1,21 @@
 {%extends "blog/base.html"%}
+{% load crispy_forms_tags %}
 {%block content%}
-    {% for post in posts%}
-        <article class = "posts">
-            <img class="rounded-circle article-img" src = "{{ post.author.profile.image.url }}">
-          <div class="media-body">
-            <div class="article-metadata">
-              <a class="mr-2" href="#">{{ post.author }}</a>
-              <small class="text-muted">{{ post.date_posted }}</small>
-            </div>
-            <h2><a class="article-title" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h2>
-            <p class="article-content">{{ post.content }}</p>
-          </div>
-        </article>
-    {% endfor %}
+    {% if user.is_authenticated %}
+    <div class="sidebar">
+        <div style = "font-size: 25px;">
+      <div class="media">
+        <img class="rounded-circle account-img" src="{{ user.profile.image.url }}">
+        <div class="media-body">
+          <h2 class="account-heading">{{ user.username }}</h2>
+          <p class="text-secondary">{{ user.email }}</p>
+            <p>Height: {{ profile_instance.height }}</p>
+            <p>Weight: {{ profile_instance.weight }}</p>
+            <p>Age: {{ profile_instance.age }}</p>
+        </div>
+      </div>
+    </div>
+    </div>
+    {% endif %}
+
 {%endblock content%}
