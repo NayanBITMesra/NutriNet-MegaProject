@@ -2,20 +2,39 @@
 {% load crispy_forms_tags %}
 {%block content%}
     {% if user.is_authenticated %}
-    <div class="sidebar">
-        <div style = "font-size: 25px;">
-      <div class="media">
-        <img class="rounded-circle account-img" src="{{ user.profile.image.url }}">
-        <div class="media-body">
-          <h2 class="account-heading">{{ user.username }}</h2>
-          <p class="text-secondary">{{ user.email }}</p>
-            <p>Height: {{ profile_instance.height }}</p>
-            <p>Weight: {{ profile_instance.weight }}</p>
-            <p>Age: {{ profile_instance.age }}</p>
+
+<div class="container">
+    <div class="container">
+        <div class="col">
+            <div class="row-6 bg-dark">
+                Graph
+            </div>
+            <div class="row-4 bg-dark">
+                Plan
+            </div>
         </div>
-      </div>
     </div>
+
+    <div class="container-fluid">
+        <div class="col">
+            <div class="row">
+                <div style = "font-size: 25px;">
+                  <div class="media">
+                    <img class="rounded-circle account-img" src="{{ user.profile.image.url }}">
+                    <div class="media-body">
+                      <h2 class="account-heading">{{ profile_instance.username }}</h2>
+                      <p class="text-secondary">{{ profile_instance.email }}</p>
+                        <p>Height: {{ profile_instance.height }}</p>
+                        <p>Weight: {{ profile_instance.weight }}</p>
+                        <p>Age: {{ profile_instance.age }}</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
     </div>
+</div>
+
     {% endif %}
 
 {%endblock content%}

@@ -13,30 +13,15 @@ from users.forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
 
 @login_required
 def home(request):
-    u_form = UserUpdateForm(request.POST, instance=request.user)
-    p_form = ProfileUpdateForm(request.POST,
-                               request.FILES,
-                               instance=request.user.profile)
-    if u_form.is_valid() and p_form.is_valid():
-        u_form.save()
-        p_form.save()
-        messages.success(request, f'Your account has been updated successfully!')
-        return redirect('profile')
-    else:
-        u_form = UserUpdateForm(instance=request.user)
-        p_form = ProfileUpdateForm(instance=request.user.profile)
-
     try:
         profile_instance = request.users.profile
     except Profile.DoesNotExist:
         profile_instance = None
     context = {
         'title': 'Home',
-        'u_form': u_form,
-        'p_form': p_form,
         'profile_instance': profile_instance,
     }
-    return render(request, 'blog/home.html',context)
+    return render(request, 'blog/Dash.html',context)
 
 
 class PostListView(ListView):

@@ -72,22 +72,24 @@ fieldset {
     overflow: hidden;
     padding : 10px;
     margin: 0;
-
-
 }
 
 
-
-
-.sidebar {
-  width: 400px;
-  background-color: black;
-  margin-top: 200px; /* Adjust top margin */
-  margin-bottom: 40px; /* Adjust bottom margin */
-  position: fixed;
-  right: 20px;
-  padding: 10px; /* Add padding if necessary */
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+.col-8 {
+    background: black;
+    margin-top: 20px; /* Adjust top margin */
+    margin-bottom: 40px; /* Adjust bottom margin */
+    margin-left: 20px; /* Adjust left margin */
+    margin-right: 40px; /* Adjust right margin */
+    height: 600px;
+}
+.col-8 {
+    background: black;
+    margin-top: 20px; /* Adjust top margin */
+    margin-bottom: 40px; /* Adjust bottom margin */
+    margin-left: 20px; /* Adjust left margin */
+    margin-right: 40px; /* Adjust right margin */
+    height: 600px;
 }
 
 .account-img {
