@@ -1,0 +1,139 @@
+body{
+    background:black;
+}
+.bg-steel {
+  background-color: black;
+}
+#Introduction{
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),url("background.png");
+    background-position: center;
+    background-size: cover;
+    background-attachment : fixed;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-weight: 1000;
+    overflow: hidden;
+    padding : 0;
+    margin : 0;
+    line-height : 20px;
+    border: 2px solid black;
+    -webkit-animation: myfirst 5s ; /* Chrome, Safari, Opera */
+    animation: myfirst 5s ;
+}
+
+
+
+
+#quote{
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),url("quote.png");
+    background-position: center;
+    background-size: cover;
+    background-attachment : fixed;
+    color: white;
+    font-style: oblique;
+    font-size: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    height: 100vh;
+    font-weight: 1000;
+    overflow: hidden;
+    padding : 0;
+    margin : 0;
+    line-height : 20px;
+    border: 2px solid black;
+    transition: background 0.25s ease;
+    -webkit-animation: myfirst 5s ; /* Chrome, Safari, Opera */
+    animation: myfirst 5s ;
+
+}
+
+
+#quote .content {
+    position: relative;
+    z-index: 1;
+    color: #fff; /* Set the text color to be visible against the background */
+    padding: 20px;
+}
+
+/* Additional styling for the content */
+#quote h2 {
+    font-size: 2em;
+}
+
+#quote p {
+    font-size: 1.2em;
+}
+
+#loginsignin{
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),url("background.png");
+    color: white;
+    font-size: 30px;
+    height: 200px;
+    text-align: center;
+    height: 100vh;
+    font-weight: 1000;
+    overflow: hidden;
+    padding : 160px;
+    padding-top: 300px;
+    margin: 0;
+
+}
+
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    text-decoration: none;
+    color: black;
+    background-color: #7d75b6;
+    color: white;
+    font-size: 30px;
+    font-weight: 1000;
+    padding: 0.5em 1em;
+    transition: all 0.5s;
+}
+
+a.button:hover{
+    transform: translateY(-10px);
+    background: white;
+    color: red;
+}
+
+@-webkit-keyframes myfirst {
+    from {opacity: 0.2;}
+    to {opacity: 1;}
+  }
+
+
+@keyframes myfirst {
+    from {opacity: 0.2;}
+    to {opacity: 1;}
+  }
+
+
+.scroll-watcher{
+    height: 10px;
+    position: fixed;
+    top:0;
+    z-index: 1000;
+    background-color: red;
+    width : 100%;
+    scale: 0 1;
+    transform-origin: left;
+    animation: scroll-watcher linear ;
+    animation-timeline: scroll();
+    }
+
+
+@keyframes scroll-watcher {
+    to {
+        scale: 1 1;
+    }
+}
