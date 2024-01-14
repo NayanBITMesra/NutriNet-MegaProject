@@ -16,6 +16,3 @@ class Post(models.Model):
 
     def get_absolute_url(self):
         return reverse('post-detail', kwargs={'pk':self.pk})
-
-
-

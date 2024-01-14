@@ -25,5 +25,3 @@ class ProfileUpdateForm(forms.ModelForm):
         model = Profile
         fields = ['image','age','height','weight']
 
-
-
