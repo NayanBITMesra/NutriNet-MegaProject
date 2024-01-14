@@ -53,6 +53,7 @@ def profile(request):
 
 
 
+
 def homepage(request):
     return render(request, 'users/homepage.html')
 

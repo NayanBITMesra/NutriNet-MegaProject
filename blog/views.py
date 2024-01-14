@@ -9,6 +9,15 @@ from plotly.graph_objs import Scatter
 from django.contrib import messages
 import plotly.express as px
 from users.forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
+import plotly.graph_objects as go
+import pandas as pd
+
+
+def graph(request):
+    df = pd.read_csv('blog/bpm.csv')
+    fig = go.Figure([go.Scatter(x=df['Time'], y=df['Value'])])
+    fig.show()
+    return redirect('blog-home')
 
 @login_required
 def home(request):
