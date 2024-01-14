@@ -20,9 +20,53 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-3" >
+                <div class="col-3" style = "padding-right: 0px;padding-left: 0px;" >
+                        <div class="accordion" id="accordionExample">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header"  id="headingOne">
+                              <button class="accordion-button" style="background: rgba(0,0,0,0.75); color:white; border-radius: 10px 10px 0 0;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Graph
+                              </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                              <div class="accordion-body">
+                                Plotly, an advanced data visualization tool, collaborates seamlessly with Arduino to orchestrate a visually
+                                  stunning representation of data. With a meticulous integration, Plotly reads data streams from Arduino,
+                                  transforming them into an elegant graph that captures the intricacies of the underlying information.
+                                  The synergy between Plotly and Arduino presents a seamless blend of technological prowess and aesthetic finesse,
+                                  where raw data is transformed into a graph that speaks volumes through its graphical brilliance.
+                              </div>
+                                <a href="{% url 'login'%}" class="button" >Graph</a>
+                            </div>
+                          </div>
+                          <div class="accordion-item">
+                            <h2 class="accordion-header"  id="headingTwo">
+                              <button class="accordion-button collapsed" style="background: rgba(0,0,0,0.75); color:white; " type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                About
+                              </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                              <div class="accordion-body">
+                                <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                              </div>
+                            </div>
+                          </div>
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                              <button class="accordion-button collapsed" style="background: rgba(0,0,0,0.75); color:white; border-radius: 0 0 10px 10px;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Profile
+                              </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                              <div class="accordion-body">
+                                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
 
-                </div>
+        </div>
         </div>
     </div>
 

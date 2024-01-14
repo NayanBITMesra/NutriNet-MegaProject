@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% load static %}
 <!DOCTYPE html>
 <html>
@@ -52,4 +53,124 @@
 </script>
 
 </body>
+=======
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel=”stylesheet” href=”https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css” />
+    <link rel="stylesheet" type = "text/css" href="{% static 'blog/homepage.css' %}">
+    <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>ios.annit();
+
+    {% if title %}
+            <link rel="icon" href="care.png" type="image/png"><title>NutriNet - {{title}}</title>
+        {% else %}
+            <link rel="icon" href="care.png"  type="image/png"><title>NutriNet</title>
+        {% endif %}
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar  navbar-dark bg-steel fixed-top">
+            <div class="container">
+                <!-- Add the SVG icon before the text -->
+                <a class="navbar-brand mr-4" href="#">
+                    <i class="fa-solid fa-heart-pulse fa-beat fa-xl" style="color: #bb0710;"></i>
+                    NutriNet
+                </a>
+            </div>
+        </nav>
+    </header>
+    
+    <div class = "fade-element"></div>
+    <section id="Introduction" class="text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 section-intro text-center" >
+                    <h2>Welcome to NutriNet - where the heart gets, what it deserves..</h2>
+            </div>
+            <div class="row g-4" >
+                <div class="col-md-4" data-aos="fade-up"
+                data-aos-duration="1000" >
+                    <div class="service">
+                        <div class="service-img">
+                            <i class="fa-solid fa-brain fa-3x" style="color: #ec46a7;"></i>
+                        </div>
+                        <h5 class="mt-5 pt-4">NEUROLOGY CARE</h5>
+                        <p>Nutrinet analyzes heart rate variability to tailor mindfulness exercises, 
+                            enhancing emotional resilience and fostering cognitive coherence for sustained mental well-being.                            
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up"
+                data-aos-duration="2000" >
+                    <div class="service">
+                        <div class="service-img">
+                            <i class="fa-solid fa-hand-holding-heart fa-3x" style="color: #34b874;"></i>
+                        </div>
+                        <h5 class="mt-5 pt-4">CARDIOLOGY CARE</h5>
+                        <p>Nutrinet employs graphed monitoring to visualize dynamic cardiological data,continuous analysis, 
+                            Nutrinet subtly integrates real-time alerts, indirectly enhancing emergency responsiveness.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up"
+                data-aos-duration="3000" >
+                    <div class="service">
+                        <div class="service-img">
+                            <i class="fa-solid fa-person-running fa-3x" style="color: #1d5fb6;"></i>
+                        </div>
+                        <h5 class="mt-5 pt-4">PHYSICAL FITNESS</h5>
+                        <p>Nutrinet optimizes exercise regimes by integrating heart rate kinetics, ensuring tailored activities aligned with cardiovascular 
+                            performance metrics.Nutrinet integrates metabolic insights to offer nuanced nutritional guidance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        </div>
+        
+        
+        <div id="quote"> 
+            <p class="quote-text" data-aos="fade-right" data-aos-offset="300"
+            data-aos-easing="ease-in-sine">
+                A healthy heart is a sign of a healthy life.<br>
+                Nurture it with good food, regular exercise, and a positive mindset to keep it beating strong.<br>
+                ~ Dr. Mehmet Oz, <br>a well-known cardiothoracic surgeon.
+            </p>
+        </div>
+        </div>
+        <div id="loginsignin">
+            <p>
+            Welcome to NutriNet <br>Your all-in-one solution for personalized health
+            and wellness management. The app was created to make sure that you feel
+            fit and fine all the time. Please free to register if you don't have an
+            account with us.
+            </p>
+            <br>
+            <a href="{% url 'register'%}" class="button" style="margin-right: 100px;" >Register</a>
+            <a href="{% url 'login'%}" class="button" >Login</a>
+        </div>
+
+    <script type="text/javascript">
+     document.addEventListener('DOMContentLoaded', function () {
+            var bg = document.getElementById("Introduction");
+            window.addEventListener('scroll', function () {
+                bg.style.opacity = 1 - window.pageYOffset / 550;
+                bg.style.top = window.pageYOffset + 'px';
+                bg.style.backgroundPositionY = -window.pageYOffset / 2 + 'px';
+            });
+        });
+</script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
+
+</body>
+>>>>>>> 6acce625bed1a9a68630729e15eb3dcad6a60a9b
 </html>

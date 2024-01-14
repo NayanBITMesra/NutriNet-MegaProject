@@ -37,6 +37,7 @@ body {
     margin-left: 15px;
     border-radius: 17px;
     padding: 25px;
+    padding-bottom:50px;
 
 
 }
@@ -161,12 +162,41 @@ fieldset {
 #last{
   color:black;
 }
-.display-text-profile{
-    color: black;
-    font: system-ui;
-    font-size: 20px;
-    font-weight: 700;
 
+
+#accordionExample{
+    margin-top: 160px;
 }
+
+.accordion-item{
+    background: rgba(255,255,255,0.2);
+    border-radius: 17px;
+}
+
+
+.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    text-decoration: none;
+    color: black;
+    background-color: #7d75b6;
+    color: white;
+    font-size: 15px;
+    font-weight: 1000;
+    padding: 10px;
+    transition: all 0.5s;
+    margin-left: 150px;
+    margin-bottom: 20px;
+    border-radius: 17px;
+}
+.button:hover{
+    transform: translateY(-10px);
+    background: white;
+    color: red;
+    border-radius: 17px;
+}
+
+
 
 
