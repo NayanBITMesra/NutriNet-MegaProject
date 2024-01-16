@@ -1,0 +1,273 @@
+body {
+  color: white;
+  margin-top: 3rem;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),url("introstarting.jpeg");
+  font-family: system-ui;
+  font-size: 15px;
+
+}
+.col-8{
+    background-color: rgba(0,0,0,0.3);
+    color:black;
+    margin-top: 25px; 
+    margin-right: 20px;
+    margin-left: 20px;
+    border-radius: 25px;
+}
+.col-3{
+    background-color:rgba(255,255,255,0.3);
+    color: black;
+    margin-top: 25px;
+    margin-right: 20px;
+    margin-left: 15px;
+    border-radius: 25px;
+
+
+}
+
+.row-7{
+    background-color:rgba(255,255,255,0.3);
+    height: 400px;
+    margin-top: 25px;
+    margin-right: 20px;
+    margin-left: 15px;
+    border-radius: 25px;
+    padding: 25px;
+   
+
+}
+.row-5{
+    background-color:rgba(255, 255, 255, 0.7);
+    height: 200px;
+    opacity: 0.8;
+    margin-top: 25px;
+    margin-right: 20px;
+    margin-left: 15px;
+    border-radius: 10px;
+    overflow-y:scroll;
+
+}
+.row-7-in{
+    background-color:rgba(0,0,0,0.6);
+    height: 350px;
+    margin-right: 20px;
+    margin-left: 15px;
+    border-radius: 10px;
+    overflow-y:scroll;
+
+
+
+
+}
+
+.graph-bar{
+  background-color: rgba(0,128,0,0.6);
+   border-top-left-radius: 10px;
+   border-bottom-left-radius: 10px;
+   height:50px;
+   display: flex;
+   justify-content: space-between;
+}
+
+.graph-bar button{
+  margin-left: auto;
+  border-top-left-radius: 10px;
+   border-bottom-left-radius: 10px;
+}
+
+
+.intro{
+    padding-left: 200px;
+    padding-top: 100px;
+    padding-right: 200px;
+    font-size: 50px;
+
+}
+.intro1{
+    padding-left: 200px;
+    padding-top: 100px;
+    padding-right: 200px;
+    font-size: 50px;
+
+}
+
+.intro-header{
+   font-size:45px;
+   padding-left:300px;
+   font-weight: 1000;
+   margin-bottom: 40px;
+   height: 100vh;
+
+}
+p{
+    font-size:25px;
+
+}
+
+
+#login{
+    background-color: #7d75b6;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 0.2em 0.4em;
+    transition: all 0.5s;
+    margin-top: 15px;
+    border-radius: 15px;
+}
+
+
+#login:hover{
+    transform: translateY(-5px);
+    background: green;
+    color: white;
+    border-radius: 25px;
+}
+
+fieldset {
+      border: 5px solid grey;
+      border-radius: 25px;
+      opacity: 1.0;
+      padding: 50px;
+      margin-bottom: 0px;
+      background: black;
+      color: grey;
+    }
+
+.bg-steel {
+  background-color: black;
+}
+
+.content-section {
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    height: 180vh;
+    overflow: hidden;
+    padding : 10px;
+    margin: 0;
+
+
+}
+
+
+
+
+
+.sidebar {
+  width: 400px;
+  background-color: black;
+  margin-top: 200px; /* Adjust top margin */
+  margin-bottom: 40px; /* Adjust bottom margin */
+  position: fixed;
+  right: 20px;
+  padding: 10px; /* Add padding if necessary */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.account-img {
+  height: 125px;
+  width: 125px;
+  margin-right: 20px;
+  margin-bottom: 16px;
+}
+
+.account-heading {
+  font-size: 2.5rem;
+}
+
+#last{
+  color:black;
+}
+
+/* Chat Response Form  */ 
+
+.chatform{
+  background-color: black; /* White background for the form */
+  opacity: 0.6;
+  padding: 15px;
+  border-radius: 20px; /* Add border radius for a rounded look */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+}
+
+.form-label {
+  color:  white; /* Dark gray color for form labels */
+  font-family: "Gill Sans", sans-serif;
+}
+
+.form-control {
+  border: 2px solid rgb(17, 97, 61); /* Dark gray border for form controls */
+}
+
+.btn-primary {
+  background-color: #089fb3; /* Bootstrap primary blue color for the button */
+  border-color: #050505;
+  border-radius: 25%;
+  border: 10px;
+  color: #ffffff; /* White text for better visibility */
+  font-family:cursive;
+}
+
+.btn-primary:hover {
+  background-color: #0d794e; /* Darker blue on hover */
+  border-color: #0d794e;
+  
+}
+
+::-webkit-scrollbar {
+  width: 12px; /* Adjust the width as needed */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #6c757d; /* Scrollbar thumb color */
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px; /* Adjust the border-radius to make it curved */
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent; /* Scrollbar track color */
+}
+
+/* Accordin */ 
+
+.accordion-body{
+  font-weight: 1000;
+  background: rgba(255,255,255,0.3);
+  margin-right: 50px;
+
+}
+
+.button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  text-decoration: none;
+  color: black;
+  background-color: #7d75b6;
+  color: white;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 1000;
+  padding: 0.2em 0.4em;
+  transition: all 0.5s;
+
+
+}
+
+.button:hover{
+  transform: translateY(-10px);
+  background: white;
+  color: red;
+}
+
+.matrix-text {
+  font-family: 'Courier New', monospace; /* Use a monospaced font for the matrix-like style */
+  font-size: 2px; /* Adjust the font size as needed */
+  color: #00ff00; /* Set the text color to green or any color you prefer */
+  letter-spacing: 2px; /* Increase letter spacing for a matrix-like effect */
+}
+
+.bot-name{
+  margin-top: 2px;
+  margin-left: 2px;
+}
